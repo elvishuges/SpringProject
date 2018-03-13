@@ -32,9 +32,9 @@ public class ItemResource {
 	private ItemRepository itemRepository;
 	
 	@GetMapping("/api/itens")
-	public String listar(){
-		return "estou aqui, get safado";
-		//return itemRepository.findAll();
+	public List<Item> listar(){
+		//return "estou aqui, get safado";
+		return itemRepository.findAll();
 	}
 	
 	@PostMapping("/api/item") // metodo http diferente do feito acima
