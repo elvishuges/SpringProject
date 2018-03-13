@@ -23,7 +23,6 @@ private long id;
 @NotEmpty
 private String etiqueta;
 
-
 @NotEmpty
 private String descricao;
 
