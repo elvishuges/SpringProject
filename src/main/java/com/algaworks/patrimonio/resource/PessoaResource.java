@@ -34,7 +34,7 @@ public class PessoaResource {
 	    return pessoaRepository.save(pessoa);
 	}
 	
-	@GetMapping("/api/pessoa//{id}")
+	@GetMapping("/api/pessoa/{id}")
 	public ResponseEntity<?> delete(@PathVariable("id") long id) {
 		
 		 pessoaRepository.deleteById(id);
