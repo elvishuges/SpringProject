@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -19,7 +20,7 @@ public class Pessoa {
 	@NotEmpty
 	private String nome;
 	
-	@NotEmpty
+	@NotNull
 	private int idade;
 
 	@Override
