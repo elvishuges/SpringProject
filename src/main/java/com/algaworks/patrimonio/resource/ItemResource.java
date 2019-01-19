@@ -38,13 +38,13 @@ public class ItemResource {
 	}
 	
 	@PostMapping("/api/item") // metodo http diferente do feito acima
-	public Item adicionar(@RequestBody @Valid Item item ){
+	public Item adicionar( Item item ){
 		LocalDate localDate = LocalDate.now();
 		item.setDataAquisicao(localDate);				
 		return itemRepository.save(item);
 	}
 	
-	@GetMapping("/api/item//{id}")
+	@GetMapping("/api/item/{id}")
 	public ResponseEntity<?> delete(@PathVariable("id") long id) {
 		
 		 itemRepository.deleteById(id);
